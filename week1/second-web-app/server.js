@@ -14,12 +14,15 @@ server.get('/', (req, res) => {
 });
 
 server.get('/books/index', (req, res) => {
-    res.send('Books index page');
-});
+    res.send(`Books index page`);
+})
 
 server.get('/books/:bookId', (req, res) => {
     const {bookId} = req.params;
+    console.log("bookId: ", bookId)
     res.send(`You passed in a book id of: ${bookId}`);
-});
+})
+
+
 
 export default server;

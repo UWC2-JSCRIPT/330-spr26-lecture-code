@@ -15,8 +15,8 @@ const widgetSchema = new mongoose.Schema({
 // {
 //   name: 'Car',
 //   parts: [
-//     {name: 'Wheel'},
-//     {name: 'Fender'},
+//     {name: "Wheel"},
+//     {name:'Fender'},
 //   ]
 // }
 

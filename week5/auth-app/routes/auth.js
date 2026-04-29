@@ -63,8 +63,13 @@ router.post(
 //   }
 // });
 
-router.post('/verify', logger, jwtVerify, async (req, res) => {
-    res.json({ payload: req.user, valid: true });
+router.post('/verify', jwtVerify, async (req, res) => {
+    const { role } = req.body;
+    const { id } = req.params;
+
+    await User.findByIdAndUpdate(id, { $addToSet: {roles: role}})
+
+    return res.sendStatus(200)
 });
 
 export default router;

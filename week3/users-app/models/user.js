@@ -12,8 +12,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.index({'contact.email': 1});
-
+userSchema.index({'contact.email': 1})
 const User = mongoose.model('users', userSchema);
 
 // User.on('index', (...args) => {

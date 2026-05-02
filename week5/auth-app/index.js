@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 import server from './server';
 
 const port = process.env.PORT || 3000;
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/auth-app';
 
-mongoose.connect('mongodb://localhost/auth-app').then(() => {
+mongoose.connect(MONGO_URL).then(() => {
   // eslint-disable-next-line no-console
   console.log('MongoDB connected');
 

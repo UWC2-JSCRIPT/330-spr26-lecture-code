@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { string, number, object } from 'yup';
 
 import * as bookDAO from '../daos/bookDao';
-import * as bookAPI from '../api/booksApi';
+import bookAPI from '../api/booksApi';
 
 const router = Router();
 

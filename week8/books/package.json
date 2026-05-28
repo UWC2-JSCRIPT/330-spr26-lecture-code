@@ -17,10 +17,11 @@
   },
   "license": "MIT",
   "jest": {
-    "testEnvironment": "node",
+    "preset": "@shelf/jest-mongodb",
     "coveragePathIgnorePatterns": [
       "/node_modules/"
-    ]
+    ],
+    "watchPathIgnorePatterns": ["globalConfig"]
   },
   "dependencies": {
     "express": "^5.2.1",
